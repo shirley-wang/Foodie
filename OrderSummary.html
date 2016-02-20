@@ -14,28 +14,42 @@
 <body>
     <?php include "navbar.php">
     <div class="container">
-      <div class="panel panel-primary">
-      <div class="panel-heading">Order Summary</div>
-      <form>
-      <div class="panel-body">Date: </div>
-      <div class="panel-body">Resturant: </div>
-      <div class="panel-body">Total :</div>
-      <div class="panel-body">Detail :</div>
-      <div class="panel-body">Address :</div>
-      </form>
-      <div class="panel-body">    
-          <!-- Map -->
-        <section id="contact" class="map">
-            <!--google maps function
-            <p id="googlemap"><p>
-                <script>
-                    
-                </script>
-                -->
-        <div style="width:500px;overflow:hidden;height:500px;max-width:100%;"><div id="display-google-map" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=CPMI+Event+Center&key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU"></iframe></div><a class="google-map-html" href="https://www.treat-lice.com" id="get-map-data">now</a><style>#display-google-map .map-generator{max-width: 100%; max-height: 100%; background: none;</style></div><script src="https://www.treat-lice.com/google-maps-authorization.js?id=aeff476e-8704-40fa-ec91-1e2ec9a28985&c=google-map-html&u=1456010385" defer="defer" async="async"></script>
-    </section></div>
+<h2 class="col-sm-9">Order Summary</h2>
+<h3 class="col-sm-3"><button class="btn-primary"> Place Order</button></h3>
+  <div class="panel-group">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse1">Order 1</a>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse in">
+        <div class="panel-body">Date:</div>
+        <div class="panel-body">Total:</div>
+        <div class="panel-body">Resturant:</div>
+        <div class="panel-body">Address:</div>
+        <div style="width:720px;overflow:hidden;height:300px;max-width:100%;"><div id="display-google-map" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=CPMI+Event+Center&key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU"></iframe></div><a class="google-map-html" href="https://www.treat-lice.com" id="get-map-data">now</a><style>#display-google-map .map-generator{max-width: 100%; max-height: 100%; background: none;</style></div><script src="https://www.treat-lice.com/google-maps-authorization.js?id=aeff476e-8704-40fa-ec91-1e2ec9a28985&c=google-map-html&u=1456010385" defer="defer" async="async"></script>
+       </div>
+      </div>
     </div>
+<!--second panel-->
+<div class="panel-group">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse2">Order 2</a>
+        </h4>
+      </div>
+      <div id="collapse2" class="panel-collapse collapse in">
+        <div class="panel-body">Date:</div>
+        <div class="panel-body">Total:</div>
+        <div class="panel-body">Resturant:</div>
+        <div class="panel-body">Address:</div>
+        <div style="width:720px;overflow:hidden;height:300px;max-width:100%;"><div id="display-google-map" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=CPMI+Event+Center&key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU"></iframe></div><a class="google-map-html" href="https://www.treat-lice.com" id="get-map-data">now</a><style>#display-google-map .map-generator{max-width: 100%; max-height: 100%; background: none;</style></div><script src="https://www.treat-lice.com/google-maps-authorization.js?id=aeff476e-8704-40fa-ec91-1e2ec9a28985&c=google-map-html&u=1456010385" defer="defer" async="async"></script>
     </div>
+</div>
+</div>
+</div>
     <!-- jQuery -->
     <script src="js/jquery-1.12.0.js"></script>
     <script src="js/bootstrap.min.js"></script>
