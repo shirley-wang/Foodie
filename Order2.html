@@ -12,13 +12,14 @@
     <link href="font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
+    <?php include "navbar.php">
     <div class="container">
   <h2>Create Your Order!!</h2>
+  
   <p></p>
   <form class="col-md-12" role="form">
+    <h3>Tell us what you want!</h3>
     <div class="form-group">
-
-      <input type="text" class="form-control" id="description" placeholder="Please describe your needs"></input>
       <br>
       <label for="sel1">Category:</label>
       <select class="form-control" id="sel1">
@@ -29,17 +30,29 @@
         <option>Pizza</option>
       </select>
       <br>
-      <label for="sel1">Price:</label>
-      <select class="form-control" id="sel1">
-        <option>$10</option>
-        <option>$15</option>
-        <option>$20</option>
-        <option>$30</option>
-      </select>      
+      <label for="sel2">Price:</label>
+      <select class="form-control" id="sel2">
+        <option>$   under 10</option>
+        <option>$$  10-15</option>
+        <option>$$  15-20</option>
+        <option>$$$ 20-30</option>
+      </select>
+      <br>
+      <label for="sel3">Time:</label>
+      <select class="form-control" id="sel3">
+        <option>With in 10 mins</option>
+        <option>10-30 mins</option>
+        <option>30-60 mins</option>
+        <option>1h-2h</option>
+      </select>       
     </div>
+    <input style="height:100px;font-size:14pt;" class="form-control" id="description" placeholder="Please describe your additional needs"></input>
+	<button class = "btn-primary btn-lg" type="button"
+style="margin-left:auto;margin-right:auto;display:block;margin-top:5%;margin-bottom:0%">
+Start</button>  
   </form>
 </div>
-    <?php include "navbar.php">
+    
     <!-- jQuery -->
     <script src="js/jquery-1.12.0.js"></script>
     <script src="js/bootstrap.min.js"></script>
