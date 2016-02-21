@@ -156,7 +156,7 @@
 
         sessionStorage.setItem('ItemList', JSON.stringify(List));
 
-        window.location.assign("view_offer.php");
+        window.location.assign("order.php");
     }
 
     function cancel(){

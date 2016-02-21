@@ -35,6 +35,18 @@
         webix.ready(function(){ webix.markup.init(); });
     </script>
 </head>
+<script>
+
+    var List = JSON.parse(sessionStorage.getItem('ItemList'));
+
+    if(List == null){
+        //alert("NULL list")
+        var items = [];
+        //var data = [ { "itemId":1,"orderId":1,"category":"Chinese","description":"Hahahaha","price":10} , { "itemId":2,"orderId":1,"category":"Pizza","description":"LOLOLOLOI","price":15} ];
+        sessionStorage.setItem('ItemList', JSON.stringify(data));
+    }
+
+</script>
 <body style="background-image: url('img/oldBKG.jpg'); background-size: cover;  margin: 0px; padding: 0px;">
 
 <div style=" width:100%; background-color:#81B02C; height: 45px">
@@ -62,7 +74,8 @@
         margin-top:5%;margin-bottom:0%;height:800px;width:600px;background-color=white" >
         <div class="panel-heading">Order Review</div>
         <div class="panel-body"id="ilist_container"></div>
-        </div>
+    </div>
+
 <div class="text-center" style="margin-left:auto;margin-right:auto;
         display:block;margin-top:5%;margin-bottom:0%;width:600px">
   <div class="btn-group btn-group-lg btn-group-justified"  style="width:600px;height=200px;">
@@ -70,11 +83,21 @@
     <a href="NewItem.php" class="btn btn-success" ><i img="">Add A New Item</i></a>
     
     <a href="#" class="btn btn-warning" ><i img="">Cancel All</i></a>
-    <a href="#" class="btn btn-success" ><i img="">Confirm All</i></a>
+    <a href="summary.php" class="btn btn-success" ><i img="">Confirm All</i></a>
 
   </div>
 </div>
 <script>
+
+    function cleanChart(){
+        var a = [];
+        essionStorage.setItem('ItemList', JSON.stringify(a));
+    }
+
+    var List = JSON.parse(sessionStorage.getItem('ItemList'));
+
+    //alert(JSON.stringify(List));
+
     webix.ui({
         id:"ilist",
         view:"dataview",
@@ -82,17 +105,15 @@
         select:1,
         type:"space",
         padding:20,
+        scroll:true,
         type:{
-            width: 470,
-            height: 125,
-            template:"<div class='overall'>" +
-            "<div><h3>#description#</h3></div>" +
-            "<div>Category: #category# </div> " +
-            "<div>$ #price# </div> " +
-            "</div>"
+            width: 300,
+            height: 100,
+            template:"<div><h4>#description#</h4></div><div>Category: #category#   ---   $ #price# </div>"
         },
-        data:course_set
-        <?php include "DBAccess/getItemList.php"?>
+
+        //url:"DBAccess/getItemList.php"
+        data: List
     });
 
 </script>

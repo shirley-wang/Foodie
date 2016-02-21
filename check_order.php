@@ -128,7 +128,8 @@ window.addEventListener('load', loadAllWaitingOrders);
 
 </script>
 <body>
-  <div id="message"></div>
+  <div id="message" style="visibility:hidden"></div>
+  <h2>Best Food</h2>
   <ul id="list"></ul>
 </body>
 </body>

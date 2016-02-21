@@ -9,15 +9,15 @@
 require_once '../Medoo/medoo.php';
 
 session_start();
-//$_POST["Items"] = '[ { "category":"Chinese","description":"Hahahaha","price":10} , { "category":"Pizza","description":"LOLOLOLOI","price":15} ]';
-//$_POST["Time"] = "2016-02-20 22:04:25";
+//$_GET["Items"] = '[ { "category":"Chinese","description":"Hahahaha","price":10} , { "category":"Pizza","description":"LOLOLOLOI","price":15} ]';
+//$_GET["Time"] = "2016-02-20 22:04:25";
 
 if( isset( $_GET["Items"] ) && isset($_GET["Time"]) ){
 
     $database = new medoo([
         'database_type' => 'mysql',
         'database_name' => 'foodie',
-        'server' => 'localhost',
+        'server' => '127.0.0.1',
         'username' => 'root',
         'password' => '123456',
         'charset' => 'utf8'
@@ -26,7 +26,8 @@ if( isset( $_GET["Items"] ) && isset($_GET["Time"]) ){
     $id = $database->insert("order",[
         'createdTime' => date("Y-m-d H:i:s"),
         'time' =>  $_GET["Time"],
-        'location' => '2321 North Loop Drive，University Blvd，Ames, IA 50010'
+        'location' => '2321 North Loop Drive，University Blvd，Ames, IA 50010',
+        'status' => 'waiting'
     ]);
 
     $Items = json_decode($_GET["Items"], true);
